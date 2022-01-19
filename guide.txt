@@ -1,0 +1,5 @@
+1) book = a single book representation
+2) BookList = holds all the book ( collection of books )
+3) Navigation = to move the application
+4) Pagination = to see more result
+5) SearchBar = to search through our BookList 
