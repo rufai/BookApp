@@ -10,7 +10,7 @@ import { useState } from 'react';
  */
 const Book = (props) => {
     // const [count, setCount] = useState(0);
-
+    
     const {
         id,
         saleInfo: {retailPrice},
@@ -21,7 +21,7 @@ const Book = (props) => {
         imageLinks: {thumbnail}
         }
     } = props.book;
-    
+    // ternary, delimiter
     return (
         <section>
             <img src={thumbnail} alt="thumbnail" />

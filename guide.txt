@@ -3,3 +3,10 @@
 3) Navigation = to move the application
 4) Pagination = to see more result
 5) SearchBar = to search through our BookList 
+
+How To Pass Data From Child To Parent Component
+
+1) create a function ( callback ) in the parent Component
+2) pass this function to the child component as prop
+3) the child will call this function and give it the data
+4) the parent will now have acces to the data
