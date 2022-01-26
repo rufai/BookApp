@@ -5,7 +5,8 @@ import bookList from './model/books.json'
 import PropTypes from 'prop-types';
 import BookList from './components/BookList';
 import { useState } from 'react';
-
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Genre from './components/Genre';
 
 function App() {
 
@@ -23,16 +24,34 @@ function App() {
 
   books.map(bookItem => <Book book={bookItem} /> )
   return (
-    <section className="App">
-      <input id='search' name='search' type="search" placeholder='search for books' onChange={(e) => previewSearch(e)}/>
-      <BookList color="orange" genre="romance" setHelpMeCollect={helpMeCollect}>    
+    <Router> 
+       <section className="App">
+         <ul>
+           <li>
+             <Link to="/genre"> Genre</Link>
+           </li>
+           <li>
+           <Link to="/author"> Author </Link>
+           </li>
+           <li>
+            <Link to="/price"> Price </Link>
+           </li>
+           
+         </ul>
+          <input id='search' name='search' type="search" placeholder='search for books' onChange={(e) => previewSearch(e)}/>
+          <BookList color="orange" genre="romance" setHelpMeCollect={helpMeCollect}>    
+              <h1>My Books {input}</h1>
+              {books.map(bookItem => <Book book={bookItem} /> )}
+          </BookList>
+        </section>
 
-            <h1>My Books {input}</h1>
-            {books.map(bookItem => <Book book={bookItem} /> )}
-   
-  
-      </BookList>
-    </section>
+        <Routes>
+          <Route path="/genre">
+              <Genre />
+          </Route>
+        </Routes>
+    </Router>
+
   );
 }
 
