@@ -10,3 +10,60 @@ How To Pass Data From Child To Parent Component
 2) pass this function to the child component as prop
 3) the child will call this function and give it the data
 4) the parent will now have acces to the data
+
+API
+===
+1)  application programming interface
+application ( website:  facebook, twitter, instagram, mobile-app, services: internet, banks, electiricty)
+bankA communicates with bankB
+( c++, python, ruby ) ===> JSON <=== ( C#, java, Go, haskel )
+bankA builds an interface that any other banks, fintech, car insurance, mortages
+
+2) Communication ( information )
+JSON - jason - the popular language of communication among computers and sevices that are communicating online
+Javascript Object Notation ( array of object ) ( objects inside an array )
+
+The protocol of communication on the web is HTTPs, smtp, ftp,
+SSL
+
+myComputer ( services, api ) =====                   yourComputer ( services, api, spotify )
+                                                           ( latest music )
+
+1) I want latest music
+2) myComputer will ask ( request ) if the music exist
+3) yourComputer will reply ( response ) that the music exist
+
+100 - 199 ( status code )
+
+4) myComputer wants to download ( request ) the music
+5) yourComputer will reply positively ( reponse )
+
+200 - 299 ( status code )
+
+6) yourComputer now says your music is now with themComputer
+
+redirection ( myComputer ==> yourComputer ==> themComputer )
+
+300 - 399 ( status code )
+
+7) 400 - 499 for when you make falty or bad request.
+
+You want to play a music that has been published. 
+
+error 404 ( you are trying to access a resource ( music/movie/pdf ) )
+
+
+8) 500 - 599
+
+the fault is with the server ( company )
+
+fetch is tool javascript natively to make network request
+fetch api
+
+HTTPs Methods 
+=============
+
+1( get )
+2 ( put )
+3 ( patch )
+4 ( post )
